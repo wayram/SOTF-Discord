@@ -1,0 +1,96 @@
+.card {
+    max-width: 200px;
+    min-height: 300px;
+    padding: 0px 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    margin-bottom: 17px;
+    user-select: none;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border-radius: .5rem;
+    position: relative;
+    transition: 0.4s;
+}
+
+.card h3 {
+    color: white;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+
+.guide {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.500);
+    color: black;
+    border-radius: .5rem;
+    transform: translateX(150%);
+    transition: .3s ease-in-out;
+    word-wrap: break-word;
+}
+
+.card:hover .guide {
+    transform: translateX(0%);
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+
+.cardTitle span i {
+    font-size: 13px;
+}
+
+.cardStats {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(170, 170, 170);
+    font-size: 14px;
+    font-style: italic;
+    word-wrap: break-word;
+}
+
+.gradientBorder {
+    position: relative;
+    padding: 1px;
+    border-radius: 1rem;
+    z-index: 1;
+    font-size: 10px;
+    color: white;
+    word-wrap: break-word;
+}
+
+.gradientBorder:before {
+    content: "";
+    position: absolute;
+    top: -3px; left: -3px; right: -3px; bottom: -3px;
+    background: linear-gradient(to right, rgba(21,177,209,1), rgba(189,27,194,1) );
+    border-radius: inherit;
+    z-index: -1;
+}
