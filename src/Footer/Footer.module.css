@@ -1,158 +1,113 @@
-
 .footer {
-    width: 100%;
-    padding: 40px 10%;
-    margin-top: auto;
-    border-top: solid 1px rgb(30, 30, 30);
-    background-color: rgba(12, 12, 12, 0.5);
+    position: relative;
+    min-height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+    border-top: solid 1px rgba(255, 0, 0, 0.5);
+    padding: 40px;
 }
 
-.footerContent {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
-    padding-bottom: 70px;
-    margin-bottom: 10px;
+.kelvinPeaking {
+    position: absolute;
+    width: 140px;
+    top: -105px;
+    left: 50%;
+    transform: translate(-50%, 0) translateY(20px);
+    opacity: 0;
+    animation: fadeInSlideUp 2s forwards;
+}
+
+.showKelvin {
+    opacity: 1;
+    transform: translate(-50%, 0) translateY(0);
+}
+
+@keyframes fadeInSlideUp {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 0) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0) translateY(0);
+    }
 }
 
 .footerItem {
-    height: 100%;
-    width: 100%;
+    color: rgb(201, 201, 201);
+}
+
+.footerItem h2 {
     color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 10px;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.footerItem a {
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .3s ease;
+    width: fit-content;
 }
 
 .footerItem a:hover {
     color: white;
-    transform: translateX(1);
+    transform: translateX(5%);
 }
 
-.footerItem a {
-    font-size: 17px;
+.footerItem p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.footerItem img {
+    max-width: 75%;
+    height: auto;
+}
+
+.footer span a {
     color: white;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
     text-decoration: none;
+    opacity: 0.5;
+    font-size: 14px;
 }
 
-.footerItem:nth-child(2) span {
+.footerItem.links {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.footerItem:nth-child(2) a {
-    font-size: 17px;
-    color: var(--font-secondary);
-    text-decoration: none;
-    transition: .3s;
-    width: fit-content;
+.footerItem.links h2 {
+    margin-bottom: 10px;
 }
 
-.footerItem:nth-child(2) a:hover {
-    color: white;
-    transform: translateX(10%);
-}
-
-.footerItem p {
-    color: var(--font-secondary);
+.footerItem.links p {
     font-size: 16px;
 }
 
-.footerItem p:last-of-type {
-    color: rgb(125, 125, 125);
-    font-size: 15px;
-    font-style: italic;
-}
-
-.socials {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.socials a {
-    font-size: 25px;
-    color: var(--font-secondary);
-    transition: .3s;
-}
-
-.socials a:hover {
-    color: white;
-}
-
-.bottomFooter {
-    color: var(--font-secondary);
-    width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.bottomFooter a {
-    color: var(--font-secondary);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 17px;
-    transition: .3s;
-}
-
-.bottomFooter span {
-    border-radius: .5rem;
-    width: fit-content;
-    cursor: pointer;
-}
-
-.bottomFooter span i {
-    color: #10b981;
-    font-size: 16px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px #1a4a3d;
-    margin-right: 5px;
-}
-
-.bottomFooter span:last-of-type {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.bottomFooter span a:hover {
-    color: white;
-}
-
-@media (max-width: 1140px) {
+@media (max-width: 768px) {
     .footer {
-        height: fit-content;
-        max-width: fit-content;
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
-    .footerContent {
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-        margin-bottom: 10px;
+
+    .footerItem {
+        margin-top: 20px;
+    }
+
+    .footer span a {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        display: block;
         text-align: center;
-    }
-    .footerItem p:last-of-type {
-        margin-bottom: 10px;
-    }
-    .bottomFooter {
-        flex-direction: column;
-        justify-content: normal;
-        text-align: center;
-        gap: 10px;
-    }
-    .footerItem:nth-child(2) span, a {
-        text-align: center;
-        align-items: center;
-    }
-    .socials {
-        justify-content: center;
+        margin-top: 20px;
     }
 }
