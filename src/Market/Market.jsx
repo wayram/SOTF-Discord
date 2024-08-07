@@ -7,7 +7,30 @@ function Market() {
   return (
     <div className={styles.marketContainer}>
         <div className={styles.wrapper}>
-            test
+            <div className={styles.marketCard}>
+
+            </div>
+            <div className={styles.marketCard}>
+              
+            </div>
+            <div className={styles.marketCard}>
+              
+            </div>
+            <div className={styles.marketCard}>
+              
+            </div>
+            <div className={styles.marketCard}>
+
+            </div>
+            <div className={styles.marketCard}>
+              
+            </div>
+            <div className={styles.marketCard}>
+              
+            </div>
+            <div className={styles.marketCard}>
+              
+            </div>
         </div>
     </div>
   );

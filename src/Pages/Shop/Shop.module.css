@@ -3,4 +3,27 @@
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    background-image: url("https://cdn.mos.cms.futurecdn.net/wXGH4yxMFqVj55ZHhRLt29.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewport a {
+    background-color: rgba(10, 10, 10, 0.7); /* Changed to use rgba for transparency */
+    padding: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px black;
+    transition: 0.3s ease;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.viewport a:hover {
+    transform: scale(1.1);
 }

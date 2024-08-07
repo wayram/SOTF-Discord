@@ -1,12 +1,17 @@
 .marketContainer {
     min-height: 100vh;
-    background-image: url("https://www.gematsu.com/wp-content/uploads/2024/02/Sons-Forest-Date_02-13-24.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 .wrapper {
+    margin: 0 10%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.marketCard {
     border: solid 2px red;
+    height: 500px;
 }
