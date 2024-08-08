@@ -3,25 +3,19 @@
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
-    background-image: url("https://cdn.mos.cms.futurecdn.net/wXGH4yxMFqVj55ZHhRLt29.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .viewport a {
-    background-color: rgba(10, 10, 10, 0.7); /* Changed to use rgba for transparency */
-    padding: 20px;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 20px black;
     transition: 0.3s ease;
     cursor: pointer;
-    color: white;
+    color: darkred;
     text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
 }
 
 .viewport a:hover {

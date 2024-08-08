@@ -9,8 +9,7 @@ function Shop() {
   return (
     <>
       <div className={styles.viewport}>
-        <Header />
-        <Link to='/'><h1>Shop Coming Soon... :)</h1></Link>
+        <Link to='/'><h1>Shop Coming Soon...</h1></Link>
       </div>
     </>
   )
