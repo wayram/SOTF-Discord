@@ -10,6 +10,7 @@ function Shop() {
     <>
       <div className={styles.viewport}>
         <Link to='/'><h1>Shop Coming Soon...</h1></Link>
+        <Link to='https://discord.com/channels/268142459844952064/shop'><p>Current Shop <i className='bx bxl-discord-alt'></i></p></Link>
       </div>
     </>
   )

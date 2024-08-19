@@ -7,6 +7,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .viewport a {
@@ -16,6 +18,17 @@
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
+}
+
+.viewport a:nth-child(2) p {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.viewport a:nth-child(2) p:hover {
+    color: #8199f0;
 }
 
 .viewport a:hover {
