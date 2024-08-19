@@ -16,6 +16,7 @@
     transform: translate(-50%, 0) translateY(20px);
     opacity: 0;
     animation: fadeInSlideUp 1s forwards;
+    cursor: pointer;
 }
 
 .showKelvin {

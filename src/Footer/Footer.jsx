@@ -4,12 +4,17 @@ import styles from './Footer.module.css';
 import textLogo from '../assets/sotfdiscordlogo.png';
 import kelvinPeaking from "../assets/kelvinPeaking.png";
 import kelvinHover from "../assets/kelvinAlerted.png";
+import kelvinAudio from "../assets/Sons Of The Forest Radio Playlist.mp3";
 
 function Footer() {
   const [showKelvin, setShowKelvin] = useState(false);
   const [kelvinSrc, setKelvinSrc] = useState(kelvinPeaking);
+  const audio = new Audio(kelvinAudio);
 
   useEffect(() => {
+    audio.volume = 0.2;
+    audio.loop = true;
+
     const handleScroll = () => {
       const bottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
       setShowKelvin(bottom);
@@ -18,7 +23,11 @@ function Footer() {
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [audio]);
+
+  const handleKelvinClick = () => {
+    audio.play().catch(err => console.error('Audio playback failed:', err));
+  };
 
   return (
     <footer className={styles.footer}>
@@ -29,6 +38,7 @@ function Footer() {
           className={`${styles.kelvinPeaking} ${styles.showKelvin}`}
           onMouseEnter={() => setKelvinSrc(kelvinHover)}
           onMouseLeave={() => setKelvinSrc(kelvinPeaking)}
+          onClick={handleKelvinClick}
         />
       )}
       <div className={`${styles.footerItem} ${styles.logoAndDisclaimer}`}>
